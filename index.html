@@ -17,8 +17,12 @@
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
+        padding: 0px;
+        margin: 0px;
         font-size: 11px;
         text-align: center;
+        background-color: var(--cor1);
+        color: white;
       }
       .attribution a {
         color: hsl(228, 45%, 44%);
@@ -26,7 +30,7 @@
 
       @font-face {
         font-family: "DM Sans";
-        src: url("assets/fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf");
+        src: url("assets/fonts/DMSans-VariableFont_opsz\,wght.ttf");
       }
 
       :root {
@@ -39,12 +43,15 @@
       }
 
       body {
+        margin: 0px;
+        padding: 10px;
         background-color: rgb(241, 241, 241);
         font-family: "DM Sans";
       }
 
       main {
-        padding: 100px;
+        margin-bottom: 10px;
+        padding: 0px 120px 0px 120px;
         display: grid;
         grid-template-areas:
           "top-left center-top center-top top-right"
@@ -52,7 +59,7 @@
           "left-bottom center-left center-right top-right"
           "left-bottom center-bottom right-bottom right-bottom";
         gap: 20px;
-        height: 700px;
+        height: 1100px;
       }
 
       .center-top {
@@ -68,10 +75,10 @@
         font-size: 20px;
       }
       .center-top .sup {
-        font-size: 45px;
+        font-size: 70px;
       }
       .center-top .sub {
-        font-size: 35px;
+        font-size: 45px;
       }
 
       .center-top img {
@@ -80,23 +87,41 @@
 
       .center-top .multiplicador {
         color: var(--cor4);
-        font-size: 46px;
+        font-size: 66px;
       }
 
       .center-left {
-        padding: 0px;
+        padding: 0px 0px 0px 40px;
         background-color: var(--cor5);
         background-image: url(assets/images/illustration-multiple-platforms.webp);
-        background-size: 400px;
+        background-size: 380px;
         background-repeat: no-repeat;
+        background-position-x: 50px;
         grid-area: center-left;
         border-radius: 10px;
+        font-size: 35px;
+        font-weight: 500;
+      }
+
+      .center-left div {
+        margin-bottom: 80px;
       }
 
       .center-right {
+        padding: 0px 0px 0px 43px;
         background-color: var(--cor4);
         grid-area: center-right;
         border-radius: 10px;
+        font-size: 40px;
+        font-weight: 500;
+        background-image: url(assets/images/illustration-consistent-schedule.webp);
+        background-size: 250px;
+        background-repeat: no-repeat;
+        background-position-x: 50%;
+        background-position-y: 240px;
+      }
+      .center-right p {
+        margin-top: 15px;
       }
 
       .top-right {
@@ -104,30 +129,104 @@
         background-image: url(assets/images/illustration-grow-followers.webp);
         grid-area: top-right;
         border-radius: 10px;
+        background-image: url(assets/images/illustration-schedule-posts.webp);
+        background-size: 380px;
+        background-repeat: no-repeat;
+        background-position-x: 50px;
+        background-position-y: 110px;
+      }
+
+      .top-right .espaco {
+        height: 340px;
+      }
+
+      .top-right h2 {
+        padding: 10px 0px 0px 0px;
+        position: relative;
+        right: -50px;
+      }
+
+      .top-right p {
+        position: absolute;
+        right: 210px;
       }
 
       .right-bottom {
+        padding: 20px;
         background-color: var(--cor2);
         grid-area: right-bottom;
         border-radius: 10px;
+        display: flex;
+        font-size: 40px;
+        color: var(--cor5);
+      }
+
+      .right-bottom img {
+        margin-right: 20px;
+        height: 220px;
       }
 
       .center-bottom {
+        padding: 20px;
         grid-area: center-bottom;
         background-color: var(--cor5);
         border-radius: 10px;
+        font-size: 20px;
+      }
+      .center-bottom h2 {
+        margin: 0px;
+        font-weight: 500;
+        font-size: 70px;
+      }
+      .center-bottom img {
+        height: 70px;
+      }
+      .center-bottom p {
+        margin: 0px 0px 30px 0px;
       }
 
       .top-left {
         background-color: var(--cor3);
         grid-area: top-left;
         border-radius: 10px;
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .top-left span {
+        color: var(--cor2);
+        font-style: italic;
+      }
+
+      .top-left img {
+        margin: 0px;
+        padding: 0px;
+        height: 100px;
       }
 
       .left-bottom {
         background-color: var(--cor4);
         grid-area: left-bottom;
         border-radius: 10px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 40px;
+      }
+
+      .left-bottom p {
+        margin-bottom: 60px;
+      }
+
+      .left-bottom img {
+        height: 280px;
       }
     </style>
   </head>
@@ -162,7 +261,8 @@
         </p>
       </section>
       <section class="top-right">
-        <h2>Schedule to social media.</h2>
+        <h2>Schedule to <br />social media.</h2>
+        <div class="espaco"></div>
         <p>
           Optimize post timings <br />
           to publish content at <br />
@@ -170,6 +270,7 @@
         </p>
       </section>
       <section class="right-bottom">
+        <img src="assets/images/illustration-grow-followers.webp" alt="" />
         <p>
           Grow followers <br />
           with non-stop <br />content.
@@ -178,22 +279,25 @@
       <section class="center-bottom">
         <h2>>56%</h2>
         <p>faster audience growth</p>
+        <img src="assets/images/illustration-audience-growth.webp" alt="" />
       </section>
       <section class="top-left">
         <p>
           Create and <br />
           schedule <br />content <br /><span>quicker.</span>
         </p>
+        <img src="assets/images/illustration-create-post.webp" alt="" />
       </section>
       <section class="left-bottom">
-        Write your <br />content <br />using AI.
+        <p>Write your <br />content <br />using AI. <br /></p>
+        <img src="assets/images/illustration-ai-content.webp" alt="" />
       </section>
     </main>
 
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">José Arthur Nascimento Santos</a>.
     </div>
   </body>
 </html>
